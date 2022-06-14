@@ -19,6 +19,9 @@ import clsx from 'clsx';
 import { Fragment, useState } from 'react';
 
 import WalletDrawer from '@/components/drawer/WalletDrawer';
+import ExploreMenu from '@/components/menu/header-menu/ExploreMenu';
+import ResourceMenu from '@/components/menu/header-menu/Resources';
+import StatsMenu from '@/components/menu/header-menu/StatsMenu';
 
 const solutions = [
   {
@@ -197,15 +200,22 @@ export default function WebMenu() {
 
             <a
               href='#'
+              className='-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100'
+            >
+              <ExploreMenu />
+            </a>
+
+            <a
+              href='#'
               className='text-base font-medium text-gray-500 hover:text-gray-900'
             >
-              Pricing
+              <StatsMenu />
             </a>
             <a
               href='#'
               className='text-base font-medium text-gray-500 hover:text-gray-900'
             >
-              Docs
+              <ResourceMenu />
             </a>
 
             <Popover className='relative'>
@@ -311,6 +321,20 @@ export default function WebMenu() {
               className='ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700'
             >
               Sign up
+            </a>
+            <a href='#' className='ml-8'>
+              <svg
+                stroke='currentColor'
+                fill='currentColor'
+                strokeWidth='0'
+                viewBox='0 0 24 24'
+                className='cursor-pointer text-gray-600 hover:text-dark dark:text-gray-300  dark:hover:text-white'
+                height='24'
+                width='24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M20 3H5C3.346 3 2 4.346 2 6v12c0 1.654 1.346 3 3 3h15c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19c-.552 0-1-.449-1-1V6c0-.551.448-1 1-1h15v3h-6c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h6.001v3H5zm15-9v4h-6v-4h6z'></path>
+              </svg>
             </a>
           </div>
           <WalletDrawer open={open} setOpen={setOpen} />
