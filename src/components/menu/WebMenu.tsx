@@ -16,7 +16,9 @@ import {
 } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+
+import WalletDrawer from '@/components/drawer/WalletDrawer';
 
 const solutions = [
   {
@@ -100,6 +102,8 @@ const recentPosts = [
 // }
 
 export default function WebMenu() {
+  const [open, setOpen] = useState(true);
+
   return (
     <Popover className='relative bg-white'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6'>
@@ -309,6 +313,7 @@ export default function WebMenu() {
               Sign up
             </a>
           </div>
+          <WalletDrawer open={open} setOpen={setOpen} />
         </div>
       </div>
 
