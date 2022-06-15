@@ -5,6 +5,7 @@ import { Fragment, useState } from 'react';
 
 import WalletDrawer from '@/components/drawer/WalletDrawer';
 import HeaderMenu from '@/components/menu/header-menu/HeaderMenu';
+import SearchBar from '@/components/menu/items/SearchBar';
 import UserMenuItem from '@/components/menu/items/UserMenuItem';
 
 export default function WebMenu() {
@@ -43,6 +44,7 @@ export default function WebMenu() {
               </Popover.Button>
             </div>
             <Popover.Group as='nav' className='hidden space-x-10 md:flex'>
+              <SearchBar />
               <HeaderMenu />
             </Popover.Group>
             <div className='hidden items-center justify-end md:flex md:flex-1 lg:w-0'>
