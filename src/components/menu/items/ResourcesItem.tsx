@@ -1,11 +1,11 @@
 import React from 'react';
 
-const StatsMenuItem = () => {
+const ResourceMenuItem = () => {
   return (
     <div className='flex flex-col items-center justify-center text-center'>
       <div className='group inline-block'>
-        <button className='min-w-32 flex items-center rounded-sm border bg-white px-3 py-1 outline-none focus:outline-none'>
-          <span className='flex-1 pr-1 font-semibold'>Stats</span>
+        <button className='min-w-32 flex items-center rounded-sm border-none bg-white px-3 py-1 outline-none focus:outline-none'>
+          <span className='flex-1 pr-1 font-semibold'>Resource</span>
           <span>
             <svg
               className='h-4 w-4 transform fill-current transition
@@ -81,4 +81,4 @@ const StatsMenuItem = () => {
   );
 };
 
-export default StatsMenuItem;
+export default ResourceMenuItem;
