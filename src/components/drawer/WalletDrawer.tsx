@@ -1,6 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
 
 //set type for open and setOpen
@@ -38,7 +37,7 @@ export default function WalletDrawer({ open, setOpen }: TypeSetOpen) {
                 leaveTo='translate-x-full'
               >
                 <Dialog.Panel className='pointer-events-auto relative w-screen max-w-md'>
-                  <Transition.Child
+                  {/* <Transition.Child
                     as={Fragment}
                     enter='ease-in-out duration-500'
                     enterFrom='opacity-0'
@@ -57,7 +56,7 @@ export default function WalletDrawer({ open, setOpen }: TypeSetOpen) {
                         <XIcon className='h-6 w-6' aria-hidden='true' />
                       </button>
                     </div>
-                  </Transition.Child>
+                  </Transition.Child> */}
                   <div className='flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl'>
                     <div className='px-4 sm:px-6'>
                       <Dialog.Title className='text-lg font-medium text-gray-900'>
